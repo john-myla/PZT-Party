@@ -1,0 +1,679 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>PZT Christmas 2022!!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="xmas/pureSnow.js" defer></script>
+  <meta name="description" content="Instant, free, organic, confetti on your screen. Sourced responsibly.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<style>
+
+#snowflakeContainer {
+position: absolute;
+left: 0px;
+top: 0px;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(white, white); /* Workaround for Chromium's selective color inversion */
+  border-radius: 50%;
+  filter: drop-shadow(0 0 20px white);
+}
+
+#button1{
+    height: 75px;
+    width: 250px;
+    font-size: 30px;
+    background-color:white;
+    border-radius:28px;
+    border:1px solid #0d0f0e;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Arial;
+    font-size:21px;
+    padding:16px 47px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px white;
+  }
+
+  #button1:hover {
+  	background-color:black;
+    color: white;
+  }
+  #button1:active {
+  	position:relative;
+  	top:1px;
+  }
+
+  body {
+  background-image: url("blue.jpg");
+  background-size: cover;
+}
+
+img{
+  height: 50px;
+  margin: left;
+}
+
+.myButton {
+height: 75px;
+width: 250px;
+background-color:white;
+border-radius:28px;
+border:1px solid #0d0f0e;
+display:inline-block;
+cursor:pointer;
+color:black;
+font-family:Arial;
+font-size:21px;
+padding:16px 47px;
+text-decoration:none;
+text-shadow:0px 1px 0px white;
+}
+
+.myButton:hover {
+background-color:black;
+color: white;
+}
+
+.myButton:active {
+position:relative;
+top:1px;
+}
+
+input{
+color: white;
+}
+
+P {
+display: inline-block;
+color: white;
+}
+
+</style>
+
+<body>
+
+  <body style = "text-align:center;">
+
+  <div class="toggleSnow">
+    <div id="snow"></div>
+        <input type="checkbox" id="toggleSnow" checked="true" onclick="toggleSnow()">
+          <p>Toggle Snow</p> <br><br>
+        </input>
+    </div>
+
+      <img src="logo.png" alt="logo">
+      <h1 style = "color:white;">
+          PZT Christmas party 2022
+          <br>
+          Raffle draw!!!
+      </h1>
+
+      <p id = "GFG_UP" style =
+          "font-size: 15px; font-weight: bold;">
+      </p>
+
+  </div>
+
+  <article>
+    <button id="button1" onclick="GFG_Fun(); celebrate();">Click here for the winner!</button>
+  </article>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+  <script src="index.js"></script>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-4533496-22");
+      pageTracker._trackPageview();
+    } catch (err) { }
+  </script>
+
+  <p id = "GFG_DOWN" style =
+      "font-size: 40px; font-weight: bold; color: white; margin-right:30px;">
+  </p>
+
+
+  <script type="text/javascript">
+      var up = document.getElementById('GFG_UP');
+      var down = document.getElementById('GFG_DOWN');
+
+      var arr = ["1_Ms.Tonette",
+"2_Geneva",
+"3_Rose",
+"4_Ms.Tonette",
+"5_Wilma",
+"6_QC Jham",
+"7_Lyca",
+"8_Ross",
+"9_Ross",
+"10_Rose",
+"11_QC Jhen",
+"12_Marinel",
+"13_Ross",
+"14_Gneva",
+"15_QC Jhen",
+"16_PT Ernz",
+"17_Wilma",
+"18_Wilma",
+"19_Menchie",
+"20_Wilma",
+"21_Wilma",
+"22_Menchie",
+"23_Sheila Mae B.",
+"24_Divine - PA",
+"25_Jilie",
+"26_Ross",
+"27_Menchie",
+"28_PT Ernz",
+"29_Rose",
+"30_Geneva",
+"31_Mary Joy",
+"32_Mary Joy",
+"33_Mary Joy",
+"34_Mary Joy",
+"35_Mary Joy",
+"36_Ms. Tonette",
+"37_Riza",
+"38_Edlyn",
+"39_Mjhane",
+"40_SC Elieza",
+"41_Mase",
+"42_Geneva",
+"43_Tricia",
+"44_Aileen G.",
+"45_Mira",
+"46_Mayor",
+"47_Kaurie",
+"48_Edhz",
+"49_Paulo",
+"50_Ross",
+"51_PSC",
+"52_Rose",
+"53_Jonas",
+"54_Marinel",
+"55_Menchie",
+"56_Charito Baring Gonido",
+"57_Charito Baring Gonido",
+"58_Charito Baring Gonido",
+"59_Charito Baring Gonido",
+"60_Wilmer",
+"61_Lon",
+"62_Daisy Dizon",
+"63_Ms. Tonette",
+"64_Jeni M.",
+"65_Jeni O.",
+"66_Marj",
+"67_Riza",
+"68_Sir Lloyd",
+"69_Go",
+"70_Ross",
+"71_Marave",
+"72_Ysa",
+"73_AJ",
+"74_Jessica",
+"75_Go",
+"76_Pat",
+"77_Chuchay",
+"78_Abinal",
+"79_Abinal",
+"80_Menchie",
+"81_Ally",
+"82_Tin Oreiro",
+"83_Camz",
+"84_Geneva",
+"85_Marave",
+"86_Mjhane",
+"87_Jera V.",
+"88_Wilmer",
+"89_Abinal",
+"90_Moca",
+"91_Mase",
+"92_Glydel",
+"93_Sir Lloyd",
+"94_Cobi",
+"95_Jera V.",
+"96_Wilmer",
+"97_Sheila Mae B.",
+"98_Abinal",
+"99_Jewel",
+"100_Ms. Tonette",
+"101_Marilou",
+"102_Edra",
+"103_Oplaria",
+"104_Wilmer",
+"105_Sandra",
+"106_QC Jham",
+"107_Kaurie",
+"108_Kosca",
+"109_Sir Lloyd",
+"110_Oplaria",
+"111_Edra",
+"112_Oplaria",
+"113_Jocelyn",
+"114_Jocelyn",
+"115_Lyca",
+"116_Pat",
+"117_Marinel",
+"118_Jilie",
+"119_Arvie Nibal",
+"120_Paulo",
+"121_QC Jackie",
+"122_RR",
+"123_Riza",
+"124_Daisy Dizon",
+"125_Edhz",
+"126_Oplaria",
+"127_Jonas",
+"128_Oplaria",
+"129_Tricia",
+"130_SC Elieza",
+"131_Wilmer",
+"132_Jonas",
+"133_Ajane",
+"134_Rejean",
+"135_Lei",
+"136_Mjhane",
+"137_Ajane",
+"138_Yell",
+"139_Jewel",
+"140_Marj",
+"141_Jocelyn",
+"142_Abinal",
+"143_Joylin",
+"144_Divine - PA",
+"145_QC Jackie",
+"146_Cobi",
+"147_Jessica",
+"148_Mary Grace",
+"149_Lyca",
+"150_Mira",
+"151_QC Pipay",
+"152_QC Pipay",
+"153_QC Pipay",
+"154_QC Pipay",
+"155_Jera V.",
+"156_Jonah",
+"157_Jonah",
+"158_Jonah",
+"159_Jonah",
+"160_Jonah",
+"161_Jeni O.",
+"162_Tricia",
+"164_Mjhane",
+"165_Mjhane",
+"166_Mjhane",
+"167_Mjhane",
+"168_Mjhane",
+"169_Rabara",
+"170_Anjao",
+"171_Sharon",
+"172_Carms",
+"173_Arvie Nibal",
+"175_Whengskie",
+"176_Chuchay",
+"177_Jera V.",
+"178_M. Almoros Feeder",
+"179_M. Almoros Feeder",
+"180_Lynlyn Alipio",
+"181_Daisy Dizon",
+"183_Sir Loyd",
+"184_Marave",
+"185_Ysa ",
+"186_Ally",
+"188_Paulo ",
+"189_Riza ",
+"190_Tina",
+"191_Jeni O.",
+"193_Ysa",
+"194_Rere",
+"195_Lei",
+"196_Jonas",
+"197_Mase ",
+"198_Kaurie",
+"199_RR",
+"200_SC Elieza",
+"201_Whengskie",
+"202_Marilou",
+"204_Rens",
+"205_Go",
+"206_Marj",
+"207_Sir Loyd",
+"208_Daisy Dizon",
+"209_Shiela Blatique",
+"210_Tina Anjao",
+"211_QC Jackie",
+"212_Divine - PA",
+"213_Jeni O.",
+"214_QC Jham",
+"215_Jera V.",
+"216_Pat",
+"217_Marave",
+"218_Marinel",
+"219_Ren",
+"220_Jhina ",
+"221_Whengskie",
+"222_Jouna",
+"223_sandra",
+"224_Daisy Dizon",
+"225_Ajane",
+"226_Mjhane",
+"227_Ajane",
+"228_QC Jhen",
+"229_Kosca",
+"230_Tina Anlao",
+"231_Marave Kalods",
+"232_Lei ",
+"233_Cobi ",
+"234_Aileen G.",
+"235_Mira",
+"236_Yell",
+"238_Lizel ",
+"239_Rere",
+"240_Jessa",
+"241_Jocelyn",
+"242_Glydel",
+"243_Aileen G.",
+"244_Arvie Nibal",
+"245_QC Jackie",
+"246_Edra",
+"247_Jessica",
+"250_QC Jhen",
+"254_Chuchay",
+"255_Illahi",
+"256_Illahi",
+"257_Illahi",
+"258_Illahi",
+"259_Illahi",
+"260_Menchie",
+"263_Femar",
+"265_Lizel ",
+"266_Tricia",
+"268_Marielle",
+"270_Lynlyn Alipio",
+"271_Jenny",
+"272_Eliz",
+"274_Menchie",
+"275_Ally",
+"276_Fe",
+"277_Sandra",
+"278_Jody",
+"279_Jody",
+"280_Go",
+"283_Jenny",
+"284_Aileen G.",
+"288_Ajane",
+"290_Divine - PA",
+"291_Gina ",
+"295_Rere",
+"296_Moca",
+"299_Ajane",
+"300_Menchie",
+"301_Collados Rech",
+"302_Mary",
+"303_Marilou",
+"304_Ally",
+"305_Lynlyn Alipio",
+"307_Femar",
+"309_Ysa",
+"310_Paulo ",
+"311_Jeni O.",
+"312_Tina Anjao",
+"313_Ajane",
+"314_Jewel",
+"315_Kosca",
+"316_Shiela Blastique",
+"317_PSC Jboy",
+"318_Wilma",
+"319_Ysa",
+"320_Mary Grace V.",
+"322_Tricia",
+"323_Collados Rech",
+"325_AJ",
+"326_Ally",
+"328_QC Jham",
+"329_Rere",
+"330_Eden",
+"331_Eden",
+"332_Collados Rech",
+"333_Wilma",
+"334_M. Almoros Feeder",
+"335_Faye ",
+"336_Collados Rech",
+"337_Mary",
+"338_Ivy",
+"339_Ivy",
+"340_Paulo",
+"341_Rabara",
+"343_Marj",
+"344_Mhelet",
+"345_Mhelet",
+"346_Mhelet",
+"347_Mhelet",
+"348_Mhelet",
+"349_Ally",
+"350_Marielle",
+"354_Marj",
+"356_Mary Grace",
+"358_Camz",
+"360_Mase",
+"363_Lizel ",
+"364_Kaurie",
+"365_SC Elieza",
+"369_QC Jham",
+"372_Aileen G.",
+"373_Gladys",
+"374_Gladys",
+"377_Ally",
+"380_Tusok",
+"381_Cadiz",
+"382_Cadiz",
+"383_Cadiz",
+"384_Cadiz",
+"385_Cadiz",
+"386_Jemalyn Tisnado Hipas",
+"387_Jemalyn Tisnado Hipas",
+"388_Jemalyn Tisnado Hipas",
+"389_Jemalyn Tisnado Hipas",
+"390_Jemalyn Tisnado Hipas",
+"391_M. Almoros Feeder",
+"393_Collados Rech",
+"394_Abby",
+"395_Abby",
+"396_Abby",
+"397_Jewel",
+"399_Rosemarie Ramos",
+"400_Divine - PA",
+"401_Whengskie",
+"402_Sandra",
+"404_Marilou",
+"405_Marielle",
+"407_Mary",
+"409_Gina ",
+"410_Lei",
+"411_Camz",
+"412_Rabara",
+"414_Jocelyn",
+"416_Tricia",
+"417_Mase",
+"418_Lyca",
+"419_Jonas",
+"421_Gladys",
+"422_Rere",
+"423_Mjhane",
+"425_QC Jhen",
+"426_PSC Jboy",
+"427_Jewel",
+"428_Julz",
+"429_Kaurie",
+"430_Eden",
+"431_Eden",
+"432_Ceajay",
+"433_Ceajay",
+"434_Ceajay",
+"435_Ceajay",
+"436_Ceajay",
+"437_Fe",
+"440_Menchie",
+"444_Wilma",
+"447_Jessica",
+"450_Menchie",
+"451_Gibz",
+"452_Gibz",
+"453_Gibz",
+"454_Gibz",
+"455_Gibz",
+"456_Jackie",
+"457_Jackie",
+"458_Jackie",
+"459_Jackie",
+"460_Mira",
+"463_Ena",
+"464_RA1 Rai",
+"469_Mary Grace",
+"472_Cobi",
+"474_Jeson",
+"475_Jeson",
+"476_Jeson",
+"477_Jeson",
+"478_Jeson",
+"480_Jhulz",
+"482_Jenfe Dablo",
+"485_GO",
+"487_Riza ",
+"488_Christellar Fei",
+"491_Ally",
+"494_Chuchay",
+"496_Ally",
+"499_Lyca",
+"500_Charito Baring Gonido",
+"501_Whengskie",
+"502_Jackie",
+"503_RR",
+"504_Gladys",
+"505_Marilou",
+"506_Lulu",
+"507_Ena",
+"509_Gina ",
+"511_Christellar Fei",
+"512_Rabara",
+"513_Jenfe Dablo",
+"514_M. Almoros Feeder",
+"515_Marinel",
+"516_Rabara",
+"517_Jouna",
+"518_Sandra",
+"519_RR",
+"520_Lei",
+"521_Jhulz",
+"522_Christellar Fei",
+"523_Lynlyn Alipio",
+"524_Camz",
+"525_Gina ",
+"527_QC Jackie",
+"529_Jessa",
+"530_Eden",
+"533_Christellar Fei",
+"538_Kaurie",
+"540_Gladys",
+"544_Christellar Fei",
+"547_Jessica",
+"549_Chuchay",
+"550_Kosca",
+"552_Tal",
+"555_Wilma",
+"557_Ally",
+"559_Cristy",
+"561_Jenfe Dablo",
+"562_Jhulz",
+"563_Mary Grace",
+"564_Eliz",
+"570_Rose",
+"572_Jhulz",
+"576_Jenfe Dablo",
+"580_QA John",
+"581_QA John",
+"582_QA John",
+"583_QA John",
+"584_QA John",
+"586_Tal",
+"588_QC Jham",
+"589_Rai",
+"590_Jouna",
+"592_Lizel ",
+"594_Luna",
+"596_Marinel",
+"599_Arvie Nibal",
+"600_Wilma",
+"601_Charito Baring Gonido",
+"603_Ashley Munoz",
+"606_Marilou",
+"609_Gina ",
+"610_Jouna",
+"611_Joylin",
+"612_Camz",
+"617_Jenfe Dablo",
+"619_Jessa",
+"620_Sang",
+"621_Sang",
+"622_Edlyn",
+"623_Lon",
+"624_Lynlyn Alipio",
+"625_AJ",
+"626_Carms",
+"628_Kaurie",
+"629_Kosca",
+"630_SC Elieza",
+"633_Joylin",
+"635_Lizel",
+"639_Cobi",
+"640_Edlyn",
+"641_Tusok",
+"645_Mira",
+"647_Jessica",
+"650_Cristy",
+"658_Edra",
+"659_Arvie Nibal",
+"660_Lulu",
+"661_Edlyn",
+"665_QC Pipay",
+"666_Jouna Mahilig",
+"667_Joylin",
+"668_Kaurie",
+"669_Edlyn",
+"670_Shiela Blastique"
+];
+
+      function GFG_Fun() {
+          down.innerHTML =
+              arr[Math.floor(Math.random() * arr.length)];
+      }
+  </script>
+</button>
+
+<br>
+
+  <button class="myButton" type="button" onClick="window.location.reload()">
+      Click here to Refresh
+  </button>
+
+</body>
+
+</html>
